@@ -193,10 +193,15 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 
 ![image](https://github.com/user-attachments/assets/9594eb62-8288-470c-8d89-69f7d7fd0c96)
 
-우선 PR검사를 통과한 **merge된 6개의 main 파일들을 feature/combat 브랜치로 가져온 다음**, **github의 Pull Request검사를 통과하고, 원래의 combat 브랜치의 2개 파일들을 포함한 총 8개의 파일을 main으로 merge**하는 절차를 밟아 해결함.
-(1. main의 파일 6개를 combat branch로 이동 -> 2. combat branch에서 PR검사 통과 -> 3. combat branch와 main을 merge)
 
-**그 후, Git-Hub의 원격 저장소에서 Pull Request를 통과한 feature/combat 브랜치에서, 2개의 (dungeon.py, combat.py) 파일들을 로컬로 pull하였음.**
+1. 우선 PR검사를 통과한 **merge된 6개의 main 파일들을 feature/combat 브랜치로 가져옴**
+2. **github의 Pull Request검사를 통과**
+3. 원래의 **combat 브랜치의 2개 파일들을 포함한 총 8개의 파일을 main으로 merge**하는 절차를 밟아 해결.
+
+*main의 파일 6개를 combat branch로 이동 -> combat branch에서 PR검사 통과 -> combat branch와 main을 merge*
+
+4. Pull Request를 통과한 feature/combat 브랜치에서, **2개의 (dungeon.py, combat.py) 파일들을 로컬로 pull하였음.**
+
 
 ![image](https://github.com/user-attachments/assets/44e1a184-431b-4585-99f7-f2ac09089eed)
 
