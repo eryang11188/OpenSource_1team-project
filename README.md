@@ -75,14 +75,11 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었습니다.
 ## 4. 주요 기능 및 역할 분담
 
 | 팀원 | 폴더 | 주요 기능 개요 | 예상 스크린샷 |
-|------|--------------------|----------------------------------------|------------------|
+|-----------|--------------------|------------------------------------------------|---------------------------------------------------------------------------------------------------|
 |안선효| feature/director | 전체 게임의 메인 루프 관리 및 메뉴 진입 인터페이스 | ![안선효１](https://github.com/user-attachments/assets/cef1ba3e-0462-4df5-9939-fa427c7bb141)|
-|송지한| feature/monster  |몬스터 데이터 정의 및 랜덤 생성, 난이도 조정 기능 |![image](https://github.com/user-attachments/assets/c03a74bc-ca96-4963-bdd9-cb76b1c52004)
-|
-|정이량| feature/player   |	플레이어 상태 관리 및 상점 구매/판매 로직 구현 | ![image](https://github.com/user-attachments/assets/4b78cf0a-8c2d-4c54-b5db-61eeefdd9830)
-|
-|박지환| feature/combat   | 전투 진행, 던전 탐색 흐름 및 결과 처리 |![image](https://github.com/user-attachments/assets/ed4f4a3f-98c7-40fc-b937-3cf8721e232d)
-|
+|송지한| feature/monster |몬스터 데이터 정의 및 랜덤 생성, 난이도 조정 기능 |![image](https://github.com/user-attachments/assets/c03a74bc-ca96-4963-bdd9-cb76b1c52004)|
+|정이량| feature/player  |	플레이어 상태 관리 및 상점 구매/판매 로직 구현 | ![image](https://github.com/user-attachments/assets/4b78cf0a-8c2d-4c54-b5db-61eeefdd9830)|
+|박지환| feature/combat  | 전투 진행, 던전 탐색 흐름 및 결과 처리 |![image](https://github.com/user-attachments/assets/ed4f4a3f-98c7-40fc-b937-3cf8721e232d)|
 
 *각 기능은 독립적이며, main.py에서 통합 후 호출하여 실행*
 
