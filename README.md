@@ -165,7 +165,9 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 ![3](https://github.com/user-attachments/assets/89f049ed-2f6d-4d0b-8dc5-63e322a740dc)
 ![9 최종 merge 결과물 확인](https://github.com/user-attachments/assets/40bddff5-6c9c-4229-b307-c88f2457ffaf)
 
-3개의 branch(feature/director, feature/monster, feature/player)는 main과 merge가 정상적으로 진행되었으나, **feature/combat 과 merge에서 충돌 유발 !!**
+3개의 branch(*feature/director, feature/monster, feature/player*)는 main과 merge가 정상적으로 진행되었으나, 
+
+***feature/combat* 을 merge 하는 과정에서 충돌 유발 !!**
 
 ---
 
@@ -183,9 +185,11 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 
 2. 이 과정에서 실수로 **feature/combat 브랜치에 pracitce를 merge하고 push**를 해버려서 원격 저장소까지 영향을 미침
 
-3. 또한 confilct 충돌이 난 이유는 feature/combat 브랜치의 2개의 파일(dungeon.py, combat.py)은 다른 파일들(main에 있는 몇개의 파일)을 import해서 사용하는 형태로 구현했지만,
+3. 결정적으로 confilct 충돌이 난 원인은 feature/combat **브랜치의 2개의 파일(dungeon.py, combat.py)은 다른 파일들(main에 있는 몇개의 파일)을 import해서 사용하는 형태로 구현했지만**,
 
-4. **이 2개의 파일만 있는 feature/combat 브랜치**에서 pull request를 보내면, **다른 파일들 없이는 당연히 실행이 불가능기에 Git이 오류로 인식**하여 PR에 실패.
+4. **이 2개의 파일만 있는 feature/combat 브랜치**에서 pull request를 보내면, **해당 파일들은 다른 파일들 없이는 당연히 실행이 불가능 하기에 Git이 이를 오류로 인식**
+
+5.**Pull request 실패로 귀결**
 
 ---
 
