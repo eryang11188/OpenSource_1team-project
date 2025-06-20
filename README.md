@@ -108,6 +108,7 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었습니다.
 ![모든 사람 최초로 각 기능별 파일 push 완료](https://github.com/user-attachments/assets/6fc5bec8-3257-422e-b75e-9938361132a9)
 ![모든 조원 1차 코드 작성 완료](https://github.com/user-attachments/assets/46551f16-d445-469d-8047-1d1c1945f694)
 ![branch 분기 많은거](https://github.com/user-attachments/assets/9a0d0ea4-f4d6-4698-a89f-069563949641)
+![각 조원들 가지 목록(역할)](https://github.com/user-attachments/assets/dc95cad4-962a-40aa-a2f4-edd5ef645686)
 
 ```
 feature/director    → 게임 디렉터리 및 흐름 제어 (안선효)
@@ -139,7 +140,7 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했습니다.
 ![pull request 2](https://github.com/user-attachments/assets/2a8ee6d3-93eb-4127-83d2-5d40d5f9b8de)
 ![pull request 3](https://github.com/user-attachments/assets/fcc80954-5f87-4b5b-b0a3-6443bd027b8f)
 ![pull request 4 최종본](https://github.com/user-attachments/assets/6afeeaaa-a4d7-4ec9-b57e-11a2a7f734a0)
-![각 조원들 가지 목록(역할)](https://github.com/user-attachments/assets/dc95cad4-962a-40aa-a2f4-edd5ef645686)
+
 
 
 
