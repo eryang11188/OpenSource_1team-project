@@ -140,7 +140,6 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했습니다.
 
 ![pull request 1](https://github.com/user-attachments/assets/3db47c64-11f8-450d-929e-d1a10133e836)
 ![image](https://github.com/user-attachments/assets/92a88a04-2d9f-4973-8cd3-d55b0a274e42)
-![pull request 3](https://github.com/user-attachments/assets/fcc80954-5f87-4b5b-b0a3-6443bd027b8f)
 ![pull request 4 최종본](https://github.com/user-attachments/assets/6afeeaaa-a4d7-4ec9-b57e-11a2a7f734a0)
 
 
