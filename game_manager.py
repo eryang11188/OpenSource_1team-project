@@ -1,34 +1,31 @@
-# ¾ÕÀ¸·Î ´Ù¸¥ ÆÀ¿øµéÀÌ ¸¸µé ÆÄÀÏµéÀ» ºÒ·¯¿É´Ï´Ù.
-import dungeon  # DÆÀ¿øÀÌ ¸¸µé dungeon.py
-import shop     # BÆÀ¿øÀÌ ¸¸µé shop.py
+# ë‹¤ë¥¸ íŒ€ì›ë“¤ì´ ë§Œë“  íŒŒì¼ë“¤ì„ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.
+import dungeon
+import shop     
+from player import Player # player ê°ì²´ì˜ íƒ€ì…ì„ ëª…í™•íˆ í•˜ê¸° ìœ„í•´ import
 
-def main_loop(player):
-    """
-    ÇÃ·¹ÀÌ¾î°¡ »ì¾ÆÀÖ´Â µ¿¾È °ÔÀÓÀÇ ¸ŞÀÎ ·çÇÁ¸¦ °è¼Ó ½ÇÇàÇÕ´Ï´Ù.
-    """
+def main_loop(player: Player): 
+    """í”Œë ˆì´ì–´ê°€ ì‚´ì•„ìˆëŠ” ë™ì•ˆ ë©”ì¸ ë£¨í”„ë¥¼ ì‹¤í–‰."""
     print("\n" + "=" * 30)
-    print("·Î±×¶óÀÌÅ© TRPG¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù!")
+    print("ë¡œê·¸ë¼ì´í¬ TRPGì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤!")
     print("=" * 30)
 
-    while player.is_alive(): # BÆÀ¿øÀÌ ¸¸µç player °´Ã¼ÀÇ is_alive() ¸Ş¼­µå¸¦ »ç¿ëÇÕ´Ï´Ù.
-        # ÇöÀç ÇÃ·¹ÀÌ¾î »óÅÂ¸¦ º¸¿©Áİ´Ï´Ù.
-        player.show_status()
+    while player.is_alive(): 
+        player.print_status() 
 
-        # »ç¿ëÀÚ¿¡°Ô Çàµ¿À» ¼±ÅÃÇÏ¶ó°í ¿äÃ»ÇÕ´Ï´Ù.
-        print("1. »ç³ÉÅÍ·Î °¡±â")
-        print("2. »óÁ¡ ¹æ¹®ÇÏ±â")
-        print("3. °ÔÀÓ Á¾·á")
+        print("1. ì‚¬ëƒ¥í„°ë¡œ ê°€ê¸°")
+        print("2. ìƒì  ë°©ë¬¸í•˜ê¸°")
+        print("3. ê²Œì„ ì¢…ë£Œ")
         
-        choice = input(">> Çàµ¿ ÀÔ·Â ")
+        choice = input(">> í–‰ë™ ì…ë ¥: ")
 
         if choice == '1':
-            dungeon.enter_dungeon(player) # DÆÀ¿øÀÇ ±â´É
+            dungeon.enter_dungeon(player) 
         elif choice == '2':
-            shop.open_shop(player)        # BÆÀ¿øÀÇ ±â´É
+            shop.enter_shop(player)      
         elif choice == '3':
-            print("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.")
-            break # while ·çÇÁ¸¦ Å»ÃâÇÏ¿© °ÔÀÓÀ» ³¡³À´Ï´Ù.
+            print("ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.")
+            break 
         else:
-            print("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.")
+            print("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.")
         
     print("\nGAME OVER")

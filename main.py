@@ -1,14 +1,11 @@
-# ÆÀ¿øµéÀÌ ¸¸µé ÆÄÀÏÀ» ºÒ·¯¿É´Ï´Ù.
 import game_manager
 from player import Player 
 
 def start_game():
-    """
-    °ÔÀÓÀ» ½ÃÀÛÇÏ±â À§ÇÑ ÁØºñ¸¦ ÇÏ°í, °ÔÀÓ ¸Å´ÏÀú¸¦ È£ÃâÇÕ´Ï´Ù.
-    """
-    player_character = Player()
+    # Player í´ë˜ìŠ¤ëŠ” ì´ë¦„ì„ ì¸ìë¡œ ë°›ìœ¼ë¯€ë¡œ, ì´ë¦„ì„ ì§€ì •í•´ì¤ë‹ˆë‹¤.
+    player_character = Player("ìš©ì‚¬")
     
-    # »ı¼ºÇÑ ÇÃ·¹ÀÌ¾î Á¤º¸¸¦ °¡Áö°í game_managerÀÇ ¸ŞÀÎ ·çÇÁ¸¦ ½ÃÀÛ½ÃÅµ´Ï´Ù.
+    # ìƒì„±í•œ í”Œë ˆì´ì–´ ì •ë³´ë¥¼ ê°€ì§€ê³  game_managerì˜ ë©”ì¸ ë£¨í”„ë¥¼ ì‹œì‘ì‹œí‚µë‹ˆë‹¤.
     game_manager.main_loop(player_character)
 
 if __name__ == "__main__":
