@@ -153,21 +153,29 @@ PR에는 다음과 같은 내용을 포함하였다:
 - 주요 변경 사항 설명
 - 코드 리뷰 및 충돌 여부 확인
 
-
 ![pull request 4 최종본](https://github.com/user-attachments/assets/6afeeaaa-a4d7-4ec9-b57e-11a2a7f734a0)
 
-**충돌이 발생할 가능성이 있는 경우, 로컬에서 사전 병합 테스트를 진행한 뒤
-main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
+**충돌이 발생할 가능성의 사전 대비책으로서, 로컬에서 사전 병합 테스트를 진행한 뒤
+main 브랜치에 반영함으로써 안정적인 통합을 추구했다.**
 
 
 ![1](https://github.com/user-attachments/assets/bd8d9b48-1a27-4ffb-9369-e1ee58b3e806)
+
+-첫번째 PR 요청
+
 ![2](https://github.com/user-attachments/assets/e1ed5dee-33f1-4061-b610-f7132729a6fa)
+
+-두번째 PR 요청
+
 ![3](https://github.com/user-attachments/assets/89f049ed-2f6d-4d0b-8dc5-63e322a740dc)
+
+-세번째 PR 요청
+
 ![9 최종 merge 결과물 확인](https://github.com/user-attachments/assets/40bddff5-6c9c-4229-b307-c88f2457ffaf)
 
 3개의 branch(*feature/director, feature/monster, feature/player*)는 main과 merge가 정상적으로 진행되었으나, 
 
-***feature/combat* 을 merge 하는 과정에서 충돌 유발 !!**
+***feature/combat* 을 merge 하는 과정에서 충돌 유발 !!!**
 
 ---
 
