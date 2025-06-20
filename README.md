@@ -46,9 +46,9 @@ OpenSource_TeamProject_1_team/ ← 전체 프로그램 통합 실행 진입점
 ```
 
 **main.py 및 구조 통합 방식**
-**본 프로젝트의 진입점은 main.py로, 전체 게임을 실행하는 메인 루프를 담당합니다.
-main.py에서는 우선 플레이어 객체를 생성한 후
-game_manager.main_loop(player)를 호출하여 전체 게임 흐름을 시작합니다.**
+**본 프로젝트의 진입점은 main.py로, 전체 게임을 실행하는 메인 루프를 담당합니다.**
+
+---
 
 **실행 시 플레이어는 다음 중 하나를 선택할 수 있습니다:**
 
@@ -95,14 +95,14 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었습니다.
 
 ![image](https://github.com/user-attachments/assets/02c6c525-7577-4cde-968f-103efe9f6fd5)
 
-**조원1 clone 복제 후, Git hub의 원격 저장소와 연결**
+*조원1 clone 복제 후, Git hub의 원격 저장소와 연결*
 
 ![image](https://github.com/user-attachments/assets/502a755c-639c-4014-aaff-d3bd5b430780)
 
-**조원2 clone 복제 후, Git hub의 원격 저장소와 연결**
+*조원2 clone 복제 후, Git hub의 원격 저장소와 연결*
 ![image](https://github.com/user-attachments/assets/e34a5ff7-9c1e-42a7-b94b-718d768513f1)
 
-**조원3 clone 복제 후, Git hub의 원격 저장소와 연결**
+*조원3 clone 복제 후, Git hub의 원격 저장소와 연결*
 
 
 # 5.1 브랜치 전략
@@ -114,19 +114,19 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었습니다.
 
 ![모든 사람 최초로 각 기능별 파일 push 완료](https://github.com/user-attachments/assets/6fc5bec8-3257-422e-b75e-9938361132a9)
 
-**팀원 각각 작업별 브랜치 등록**
+*팀원 각각 작업별 브랜치 등록*
 
 ![모든 조원 1차 코드 작성 완료](https://github.com/user-attachments/assets/46551f16-d445-469d-8047-1d1c1945f694)
 
-**1차적으로 모든 팀원 코드 작성 완료**
+*1차적으로 모든 팀원 코드 작성 완료*
 
 ![branch 분기 많은거](https://github.com/user-attachments/assets/9a0d0ea4-f4d6-4698-a89f-069563949641)
 
-**merge 직전 각 작업 브랜치별 기능 완성**
+*merge 직전 각 작업 브랜치별 기능 완성*
 
 ![각 조원들 가지 목록(역할)](https://github.com/user-attachments/assets/dc95cad4-962a-40aa-a2f4-edd5ef645686)
 
-**각 조원들 브랜치 목록**
+*각 조원들 브랜치 목록*
 
 ```
 feature/director    → 게임 디렉터리 및 흐름 제어 (안선효)
