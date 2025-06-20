@@ -1,4 +1,4 @@
-<h1 style="text-align:center">팀 프로젝트 보고서</h1>
+<h1 style="text-align:center">오픈소스 1팀 프로젝트 보고서</h1>
 
 ---
 
