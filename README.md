@@ -8,7 +8,7 @@
 - **제출팀:** 컴퓨터공학과 오픈소스소프트웨어 4조
 - **팀원명:** 1, 2, 3, 4
 - **제출일:** 2025년 6월 XX일
-- **저장소:** https://github.com/your-org/team-project
+- **저장소:** https://github.com/eryang11188/OpenSource_1team.git
 
 ---
 
