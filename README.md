@@ -183,13 +183,13 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 
 2. 이 과정에서 실수로 **feature/combat 브랜치에 pracitce를 merge하고 push**를 해버려서 원격 저장소까지 영향을 미침
 
-3. 또한 confilct 충돌이 난 이유는 combat의 2개의 파일들은 다른 파일들(main에 있는 6개 파일)을 import해서 사용하는 형태로 구현했지만,
+3. 또한 confilct 충돌이 난 이유는 feature/combat 브랜치의 2개의 파일(dungeon.py, combat.py)은 다른 파일들(main에 있는 몇개의 파일)을 import해서 사용하는 형태로 구현했지만,
 
-4. 이 2개의 파일들을 **feature/combat 브랜치에서 따로 pull request를 보내 유효성 검사를 하다**보니 다른 6개의 파일 없이는 실행이 불가하여 Git이 오류로 인식하면서 검사가 실패해버렸음.
+4. **이 2개의 파일만 있는 feature/combat 브랜치**에서 pull request를 보내면, **다른 파일들 없이는 당연히 실행이 불가능기에 Git이 오류로 인식**하여 PR에 실패.
 
 ---
 
-# 해결방법
+# 해결
 
 ![image](https://github.com/user-attachments/assets/9594eb62-8288-470c-8d89-69f7d7fd0c96)
 
