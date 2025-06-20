@@ -94,15 +94,15 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었다.
 
 ![git 연결 및 등록 후 main branch 생성](https://github.com/user-attachments/assets/47c6f7cd-7707-4a70-853d-577e926d132b)
 
-*--호스트가 최초로 README.md 파일을 main branch에 push하여 생성*
+*-호스트가 최초로 README.md 파일을 main branch에 push하여 생성*
 
 ![image](https://github.com/user-attachments/assets/02c6c525-7577-4cde-968f-103efe9f6fd5)
 
-*--조원1 clone 복제 후, Git hub의 원격 저장소와 연결*
+*-조원1 clone 복제 후, Git hub의 원격 저장소와 연결*
 
 ![image](https://github.com/user-attachments/assets/502a755c-639c-4014-aaff-d3bd5b430780)
 
-*--조원2 clone 복제 후, Git hub의 원격 저장소와 연결*
+*-조원2 clone 복제 후, Git hub의 원격 저장소와 연결*
 
 ![image](https://github.com/user-attachments/assets/e34a5ff7-9c1e-42a7-b94b-718d768513f1)
 
@@ -119,19 +119,19 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었다.
 
 ![모든 사람 최초로 각 기능별 파일 push 완료](https://github.com/user-attachments/assets/6fc5bec8-3257-422e-b75e-9938361132a9)
 
-*--팀원 각각 작업별 브랜치 등록*
+*-팀원 각각 작업별 브랜치 등록*
 
 ![모든 조원 1차 코드 작성 완료](https://github.com/user-attachments/assets/46551f16-d445-469d-8047-1d1c1945f694)
 
-*--1차적으로 모든 팀원 코드 작성 완료*
+*-1차적으로 모든 팀원 코드 작성 완료*
 
 ![branch 분기 많은거](https://github.com/user-attachments/assets/9a0d0ea4-f4d6-4698-a89f-069563949641)
 
-*--merge 직전 각 작업 브랜치별 기능 완성*
+*-merge 직전 각 작업 브랜치별 기능 완성*
 
 ![각 조원들 가지 목록(역할)](https://github.com/user-attachments/assets/dc95cad4-962a-40aa-a2f4-edd5ef645686)
 
-*--각 조원들 브랜치 목록*
+*-각 조원들 브랜치 목록*
 
 ```
 feature/director    → 게임 디렉터리 및 흐름 제어 (안선효)
@@ -165,11 +165,11 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 ![3](https://github.com/user-attachments/assets/89f049ed-2f6d-4d0b-8dc5-63e322a740dc)
 ![9 최종 merge 결과물 확인](https://github.com/user-attachments/assets/40bddff5-6c9c-4229-b307-c88f2457ffaf)
 
-3개의 branch(feature/director, feature/monster, feature/player)는 main과 merge가 정상적으로 진행되었으나, **feature/combat 과 merge에서 충돌 유발**
+3개의 branch(feature/director, feature/monster, feature/player)는 main과 merge가 정상적으로 진행되었으나, **feature/combat 과 merge에서 충돌 유발 !!**
 
 ---
 
-# 5.3 Merge 진행중 마지막에 충돌 발생.
+# 5.3 Merge 진행중 마지막에 Conflict 발생
 
 ![5 merge conflict](https://github.com/user-attachments/assets/043a8494-0cb5-43fa-9642-2dfc33065b5d)
 
@@ -207,11 +207,11 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 
 ![11](https://github.com/user-attachments/assets/c6f24fc0-192c-4f53-9ea1-41ae3d63f06d)
 
-**--성공**
+**-성공**
 
 ![10](https://github.com/user-attachments/assets/c42d4b2c-0240-44da-a900-33aaa9f45049)
 
-**--완성 후 최종 실행**
+**-완성 후 최종 실행**
 
 ![image](https://github.com/user-attachments/assets/d9d85e7c-8955-4e63-a504-8c00c39dbd08)
 
@@ -345,13 +345,13 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 
 # 7.2 아쉬운 점 및 개선 아이디어
 
-- 프로젝트 초기에는 역할 분담과 브랜치 전략에 대한 명확한 가이드가 부족해 브랜치 생성 위치나 병합 타이밍에서 충돌이 발생함. 초기 설계 단계에서 작업 흐름에 대한 구체적인 합의가 필요했음(파일명, 브랜치명 등의 통일).
+- 프로젝트 초기에는 역할 분담과 브랜치 전략에 대한 명확한 가이드가 부족해 브랜치 생성 위치나 병합 타이밍에서 충돌이 발생함. 초기 설계 단계에서 작업 흐름에 대한 구체적인 합의(파일명, 브랜치명 등의 통일)가 필요했음.
 
-- 초기에 주제를 선정할 때 공학용 계산기로 선정하려 했으나 주제의 독창성과 창의성이 부족하다고 판단되어 다른 주제를 정하느라 시간 소요가 많았음.
+- 초기에 주제를 선정할 때 공학용 계산기로 선정하려 했으나 주제의 독창성과 창의성이 부족하다고 판단되어 다른 주제를 정하느라 시간 소요가 많았음. 향후 주제 선정 시 여러 주제들을 후보로 선정하고, 각 주제들별로 간단하게 프로그래밍 해보며 방향성을 정하면서 개발해야 한다고 느낌
 
-- 각 기능이 독립적이다 보니 통합 시 데이터 공유 방식을 고려하지 못해 중복된 정보 관리나 상태 동기화에 어려움을 겪음. 
+- 각 기능이 독립적이다 보니 통합 시 데이터 공유 방식을 고려하지 못해 중복된 정보 관리나 상태 동기화에 어려움을 겪음. 기능별로 상호관계를 명확하고 구체적으로 계획해야 한다고 깨달음.
 
-- 실행 구조를 설계할 때 각 파일에서 서로 복잡하게 호출하는 방식으로 구현하는 것이 아니라, 처음부터 main.py 진입 지점에서 기능을 명확히 호출하고 출력 흐름을 통제하는 방식으로 설계했다면 병합 시 혼란을 줄일 수 있었을 것임.
+- 실행 구조를 설계할 때 각 파일에서 서로 복잡하게 호출하는 방식으로 구현하여 conflict 문제를 해결하는데 어려움을 겪었음. 처음부터 main.py 진입 지점에서 기능을 명확히 호출하고 출력 흐름을 통제하는 방식으로 설계했다면 병합 시 혼란을 줄일 수 있었을 것.
 
 - merge 시 conflict 문제를 해결하는데 상당한 시간이 소요되었음. **시간 소요의 대부분은 충돌원인을 찾지 못하는 것이었으며, 충돌 후에 복구하는 방법 등 대처하는데도 어려움을 겪었음**(사실 이번 프로젝트의 가장 큰 고비였습니다). 그러나 이번 프로젝트를 통해 conflict문제를 해결하는 경험을 함으로써 향후 git 활용 시 보다 능숙하게 대처할 것이라고 확신함.
  
