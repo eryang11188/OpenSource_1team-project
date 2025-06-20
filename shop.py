@@ -1,11 +1,10 @@
-# 상점 완료
-
 from player import Player
 
 def enter_shop(player: Player):
     print("\n🛒 상점에 오신 것을 환영합니다!")
     while True:
         print("\n[상점 메뉴]")
+        player.print_status() # 플레이어 상태를 보여줘서 구매에 참고하도록 함
         print("1. 체력 회복 (+30 HP) - 10골드")
         print("2. 공격력 증가 (+2 ATK) - 20골드")
         print("3. 방어력 증가 (+2 DEF) - 20골드")
@@ -34,10 +33,3 @@ def enter_shop(player: Player):
             break
         else:
             print("잘못된 입력입니다.")
-
-if __name__ == "__main__":
-    # 테스트용 실행 코드
-    p = Player("용사")
-    p.print_status()
-    enter_shop(p)
-    p.print_status()

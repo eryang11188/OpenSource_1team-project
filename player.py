@@ -1,6 +1,3 @@
-# 플레이어 기능 코드
-
-
 class Player:
     def __init__(self, name):
         self.name = name
@@ -21,10 +18,15 @@ class Player:
         print(f"소지 골드: {self.gold}")
         print(f"인벤토리: {', '.join(self.inventory) if self.inventory else '없음'}\n")
 
+    def is_alive(self):
+        return self.hp > 0
+    
     def take_damage(self, amount):
         damage = max(1, amount - self.defense)
         self.hp -= damage
-        print(f"{self.name}은(는) {damage}의 피해를 입었습니다.")
+        if self.hp < 0:
+            self.hp = 0
+        print(f"{self.name}은(는) {damage}의 피해를 입었습니다. (현재 체력: {self.hp})")
         if self.hp <= 0:
             print(f"{self.name}은(는) 쓰러졌습니다!")
 
@@ -51,8 +53,10 @@ class Player:
         self.check_level_up()
 
     def check_level_up(self):
-        if self.exp >= self.level * 10:
-            self.exp -= self.level * 10
+        # 레벨업에 필요한 경험치는 레벨*10으로 가정
+        required_exp = self.level * 10 
+        if self.exp >= required_exp:
+            self.exp -= required_exp
             self.level += 1
             self.max_hp += 10
             self.hp = self.max_hp
@@ -60,13 +64,3 @@ class Player:
             self.defense += 1
             print(f"레벨 업! 현재 레벨: {self.level}")
             print(f"체력, 공격력, 방어력이 상승했습니다!")
-
-if __name__ == "__main__":
-    p = Player("용사")
-    p.print_status()
-    p.take_damage(12)
-    p.heal(5)
-    p.earn_gold(20)
-    p.spend_gold(30)
-    p.gain_exp(15)
-    p.print_status()
