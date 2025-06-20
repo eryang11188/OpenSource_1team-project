@@ -90,12 +90,18 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었습니다.
 - 각 조원 Git hub 원격 저장소와 로컬 연결 
 
 ![git 연결 및 등록 후 main branch 생성](https://github.com/user-attachments/assets/47c6f7cd-7707-4a70-853d-577e926d132b)
+
 **호스트가 최초로 README.md 파일을 main branch에 push하여 생성**
+
 ![image](https://github.com/user-attachments/assets/02c6c525-7577-4cde-968f-103efe9f6fd5)
+
 **조원1 clone 복제 후, Git hub의 원격 저장소와 연결**
+
 ![image](https://github.com/user-attachments/assets/502a755c-639c-4014-aaff-d3bd5b430780)
+
 **조원2 clone 복제 후, Git hub의 원격 저장소와 연결**
 ![image](https://github.com/user-attachments/assets/e34a5ff7-9c1e-42a7-b94b-718d768513f1)
+
 **조원3 clone 복제 후, Git hub의 원격 저장소와 연결**
 
 
@@ -107,12 +113,19 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었습니다.
 
 
 ![모든 사람 최초로 각 기능별 파일 push 완료](https://github.com/user-attachments/assets/6fc5bec8-3257-422e-b75e-9938361132a9)
+
 **팀원 각각 작업별 브랜치 등록**
+
 ![모든 조원 1차 코드 작성 완료](https://github.com/user-attachments/assets/46551f16-d445-469d-8047-1d1c1945f694)
+
 **1차적으로 모든 팀원 코드 작성 완료**
+
 ![branch 분기 많은거](https://github.com/user-attachments/assets/9a0d0ea4-f4d6-4698-a89f-069563949641)
+
 **merge 직전 각 작업 브랜치별 기능 완성**
+
 ![각 조원들 가지 목록(역할)](https://github.com/user-attachments/assets/dc95cad4-962a-40aa-a2f4-edd5ef645686)
+
 **각 조원들 브랜치 목록**
 
 ```
@@ -162,10 +175,10 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했습니다.*
 # 문제의 원인
 ![image](https://github.com/user-attachments/assets/3fd843fe-9b0f-47bc-b6c1-9445847efaf4)
 
-**1.** 최종 merge를 대비해서 practice 브랜치를 만들어서 로컬에서 병합을 예비 시도해보았음
-**2.** 이 과정에서 실수로 **feature/combat 브랜치에 pracitce를 merge하고 push**를 해버려서 원격 저장소까지 영향을 미침
-**3.** 또한 confilct 충돌이 난 이유는, combat의 파일들이 다른 파일들을 import해서 사용하는 형태로 구현했지만,
-**4.** 이 파일들을 **2개만 따로 브랜치에서 pull request를 보내 유효성 검사를 하다**보니 다른 6개의 파일 없이는 Git이 오류로 인식하여 검사가 실패해버렸음.
+-1. 최종 merge를 대비해서 practice 브랜치를 만들어서 로컬에서 병합을 예비 시도해보았음
+-2. 이 과정에서 실수로 **feature/combat 브랜치에 pracitce를 merge하고 push**를 해버려서 원격 저장소까지 영향을 미침
+-3. 또한 confilct 충돌이 난 이유는, combat의 파일들이 다른 파일들을 import해서 사용하는 형태로 구현했지만,
+-4. 이 파일들을 **2개만 따로 브랜치에서 pull request를 보내 유효성 검사를 하다**보니 다른 6개의 파일 없이는 Git이 오류로 인식하여 검사가 실패해버렸음.
 
 
 # 해결방법
@@ -214,6 +227,7 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했습니다.*
   [3] 게임 종료
   선택 >> 
   ```
+
 특이사항:
 -main.py에서 player 객체를 생성 후 main_loop(player)로 흐름 진입
 -모든 기능은 독립 모듈에 위임되어 있으며, 중앙에서 호출만 담당
