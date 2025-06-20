@@ -76,10 +76,10 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었습니다.
 
 | 팀원 | 폴더 | 주요 기능 개요 | 예상 스크린샷 |
 |------|--------------------|----------------------------------------|------------------|
-|안선효| feature/director   | 메인 게임 루프 시작, 사용자 입력 핸들링 | ![안선효１](https://github.com/user-attachments/assets/cef1ba3e-0462-4df5-9939-fa427c7bb141)|
-|송지한| feature/monster    | 메인 게임 루프 시작, 사용자 입력 핸들링 | `캡처 삽입 예정` |
-|정이량| feature/player     | 메인 게임 루프 시작, 사용자 입력 핸들링 | `캡처 삽입 예정` |
-|박지환| feature/combat     | 메인 게임 루프 시작, 사용자 입력 핸들링 | `캡처 삽입 예정` |
+|안선효| feature/director | 전체 게임의 메인 루프 관리 및 메뉴 진입 인터페이스 | ![안선효１](https://github.com/user-attachments/assets/cef1ba3e-0462-4df5-9939-fa427c7bb141)|
+|송지한| feature/monster  |몬스터 데이터 정의 및 랜덤 생성, 난이도 조정 기능 |![코드 수정 3](https://github.com/user-attachments/assets/5c83b93a-b74d-423a-b93d-d668b4662b9a)|
+|정이량| feature/player   |	플레이어 상태 관리 및 상점 구매/판매 로직 구현 | ![image](https://github.com/user-attachments/assets/2e46360c-1455-4f3c-aab5-4d3d0cb65c01)|
+|박지환| feature/combat   | 전투 진행, 던전 탐색 흐름 및 결과 처리 | ![데미지 구현](https://github.com/user-attachments/assets/b7bbce3b-7450-479c-9b2f-835f8dd063ea)|
 
 *각 기능은 독립적이며, main.py에서 통합 후 호출하여 실행*
 
