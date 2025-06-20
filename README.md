@@ -58,10 +58,14 @@ OpenSource_TeamProject_1_team/ ← 전체 프로그램 통합 실행 진입점
 - 레벨업 시스템 
 - 게임 종료
 
+---
+
 - 이 선택 메뉴는 터미널 기반 인터페이스로 구성되어 있으며, 각 기능은 다음과 같이 모듈별 함수 호출 방식으로 실행된다:
 
 dungeon.enter_dungeon(player) → 전투 진행
+
 shop.enter_shop(player) → 상점 기능 실행
+
 combat.start_combat(player, monster) → 전투 시스템
 
 - 각 기능은 독립적인 .py 파일로 분리되어 있으며 모든 핵심 로직은 main.py와 game_manager.py를 통해 통합됨.
@@ -148,8 +152,7 @@ feature/player      → 플레이어 및 상점 시스템 (정이량)
 모든 팀원은 각자 할당된 브랜치에서 기능 개발을 완료한 후,
 GitHub 상에서 main 브랜치로 Pull Request(PR)를 생성하여 병합을 요청했다.
 PR에는 다음과 같은 내용을 포함하였다:
-- 기능 요약 및 주요 변경 사항 설명
-- 테스트 방법 혹은 실행 화면 캡처
+- 주요 변경 사항 설명
 - 코드 리뷰 및 충돌 여부 확인
 
 
