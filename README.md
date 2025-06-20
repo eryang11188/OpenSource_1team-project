@@ -4,7 +4,7 @@
 
 # 1. 프로젝트 정보
 
-- **과제명:** Git 협업을 통한 파이썬 기반 텍스트 TRPG 게임 구현
+- **과제명:** Git 협업을 통한 파이썬 기반 텍스트 터미널 TRPG 게임 구현
 - **제출팀:** 오픈소스소프트웨어 1조
 - **팀원명:** 안선효, 박지환, 정이량, 송지한
 - **제출일:** 2025년 6월 XX일
@@ -41,7 +41,7 @@ OpenSource_TeamProject_1_team/ ← 전체 프로그램 통합 실행 진입점
 ├── feature/combat/            ← 팀원 4. 박지환(전투, 던전 기능 구현)
 │   └── dungeon.py
 |   └── combat.py
-
+|
 
 ```
 
@@ -60,15 +60,15 @@ OpenSource_TeamProject_1_team/ ← 전체 프로그램 통합 실행 진입점
 
 ---
 
-- 이 선택 메뉴는 터미널 기반 인터페이스로 구성되어 있으며, 각 기능은 다음과 같이 모듈별 함수 호출 방식으로 실행된다:
+**이 선택 메뉴는 터미널 기반 인터페이스로 구성되어 있으며, 각 기능은 다음과 같이 모듈별 함수 호출 방식으로 실행된다:**
 
-dungeon.enter_dungeon(player) → 전투 진행
+- dungeon.enter_dungeon(player) → 전투 진행
 
-shop.enter_shop(player) → 상점 기능 실행
+- shop.enter_shop(player) → 상점 기능 실행
 
-combat.start_combat(player, monster) → 전투 시스템
+- combat.start_combat(player, monster) → 전투 시스템
 
-- 각 기능은 독립적인 .py 파일로 분리되어 있으며 모든 핵심 로직은 main.py와 game_manager.py를 통해 통합됨.
+**각 기능은 독립적인 .py 파일로 분리되어 있으며 모든 핵심 로직은 main.py와 game_manager.py를 통해 통합됨.**
 
 이 구조는 모듈화를 기반으로 Git 협업을 효율화하기 위한 것으로,
 모든 팀원이 각자의 .py 모듈을 별도 브랜치에서 개발 후 병합하여
@@ -109,6 +109,7 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었다.
 
 *조원3 clone 복제 후, Git hub의 원격 저장소와 연결*
 
+---
 
 # 5.1 브랜치 전략
 
@@ -145,8 +146,6 @@ feature/player      → 플레이어 및 상점 시스템 (정이량)
 
 ---
 
-
-
 # 5.2 Pull Request & 병합 방식
 
 모든 팀원은 각자 할당된 브랜치에서 기능 개발을 완료한 후,
@@ -167,15 +166,17 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 ![3](https://github.com/user-attachments/assets/89f049ed-2f6d-4d0b-8dc5-63e322a740dc)
 ![9 최종 merge 결과물 확인](https://github.com/user-attachments/assets/40bddff5-6c9c-4229-b307-c88f2457ffaf)
 
-**feature/director, feature/monster, feature/player 3개의 branch는 main과 merge가 정상적으로 진행되었으나, feature/combat 과 merge에서 충돌 유발**
+3개의 branch(feature/director, feature/monster, feature/player)는 main과 merge가 정상적으로 진행되었으나, **feature/combat 과 merge에서 충돌 유발**
 
+---
 
 # 5.3 Merge 진행중 마지막에 충돌 발생.
 
 ![5 merge conflict](https://github.com/user-attachments/assets/043a8494-0cb5-43fa-9642-2dfc33065b5d)
 
 **feature/combat 브랜치가 마지막에 conflict 충돌을 유발함**
---
+---
+
 # 문제의 원인
 ![image](https://github.com/user-attachments/assets/3fd843fe-9b0f-47bc-b6c1-9445847efaf4)
 
@@ -187,6 +188,7 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 
 4. 이 2개의 파일들을 **feature/combat 브랜치에서 따로 pull request를 보내 유효성 검사를 하다**보니 다른 6개의 파일 없이는 실행이 불가하여 Git이 오류로 인식하면서 검사가 실패해버렸음.
 
+---
 
 # 해결방법
 
@@ -208,8 +210,6 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 **완성 후 최종 실행**
 
 ![image](https://github.com/user-attachments/assets/d9d85e7c-8955-4e63-a504-8c00c39dbd08)
-
-
 
 
 ---
@@ -329,7 +329,7 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 
 # 7.1 Git 협업을 통해 얻은 점
 
-- 개인 작업을 브랜치로 분리하고 PR(Pull Request) 기반으로 병합하는 과정을 통해, 실제 오픈소스 개발처럼 버전 관리의 흐름을 체득할 수 있었음.
+- 개인 작업을 각각의 브랜치로 분리하고 PR(Pull Request) 기반으로 병합하는 과정을 통해, 실제 오픈소스 개발처럼 버전 관리의 흐름을 체득할 수 있었음.
 
 - merge 후 conflict 문제를 직접 겪고 해결하면서 단순 명령어 암기가 아닌 문제 상황에 맞는 Git 전략 사용법을 실전처럼 학습함.
 
@@ -349,7 +349,7 @@ main 브랜치에 반영함으로써 안정적인 통합을 유지했다.**
 
 - 실행 구조를 설계할 때 각 파일에서 서로 복잡하게 호출하는 방식으로 구현하는 것이 아닌, 처음부터 main.py 진입 지점에서 기능을 명확히 호출하고 출력 흐름을 통제하는 방식으로 설계했다면 병합 시 혼란을 줄일 수 있었을 것임.
 
-- merge 시 conflict 문제를 해결하는데 상당한 시간이 소요되었음. 시간 소요의 대부분은 충돌원인을 찾지 못하는 것이었으며, 충돌 후에 복구하는 방법 등 대처하는데도 어려움을 겪었음(사실 이번 프로젝트의 가장 큰 고비였습니다). 그러나 이번 프로젝트 경험을 통해 직접 충돌을 경험함으로써 향후 git 활용 시 보다 능숙하게 대처할 것이라고 확신함.
+- merge 시 conflict 문제를 해결하는데 상당한 시간이 소요되었음. **시간 소요의 대부분은 충돌원인을 찾지 못하는 것이었으며, 충돌 후에 복구하는 방법 등 대처하는데도 어려움을 겪었음**(사실 이번 프로젝트의 가장 큰 고비였습니다). 그러나 이번 프로젝트를 통해 conflict문제를 해결하는 경험을 함으로써 향후 git 활용 시 보다 능숙하게 대처할 것이라고 확신함.
 
 ---
 
