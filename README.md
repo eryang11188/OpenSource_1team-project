@@ -45,12 +45,12 @@ OpenSource_TeamProject_1_team/ ← 전체 프로그램 통합 실행 진입점
 
 ```
 
-# main.py 및 구조 통합 방식
+- main.py 및 구조 통합 방식
 *본 프로젝트의 진입점은 main.py로, 전체 게임을 실행하는 메인 루프를 담당합니다.
 main.py에서는 우선 플레이어 객체를 생성한 후
 game_manager.main_loop(player)를 호출하여 전체 게임 흐름을 시작합니다.*
 
-# 실행 시 플레이어는 다음 중 하나를 선택할 수 있습니다:
+- 실행 시 플레이어는 다음 중 하나를 선택할 수 있습니다:
 
 - 던전에 입장하여 몬스터와 전투
 - 상점에서 아이템(장비,물약) 구매 또는 능력치 구매
@@ -58,14 +58,14 @@ game_manager.main_loop(player)를 호출하여 전체 게임 흐름을 시작합
 - 레벨업 시스템 
 - 게임 종료
 
-# 이 선택 메뉴는 터미널 기반 인터페이스로 구성되어 있으며, 각 기능은 다음과 같이 모듈별 함수 호출 방식으로 실행됩니다:
+- 이 선택 메뉴는 터미널 기반 인터페이스로 구성되어 있으며, 각 기능은 다음과 같이 모듈별 함수 호출 방식으로 실행됩니다:
 
 dungeon.enter_dungeon(player) → 전투 진행
 shop.enter_shop(player) → 상점 기능 실행
 combat.start_combat(player, monster) → 전투 시스템
 coin.py → (미완성) 몬스터 처치 보상 계산 기능 시도
 
-# 각 기능은 독립적인 .py 파일로 분리되어 있으며 모든 핵심 로직은 main.py와 game_manager.py를 통해 통합됩니다.
+- 각 기능은 독립적인 .py 파일로 분리되어 있으며 모든 핵심 로직은 main.py와 game_manager.py를 통해 통합됩니다.
 
 이 구조는 모듈화를 기반으로 Git 협업을 효율화하기 위한 것으로,
 모든 팀원이 각자의 .py 모듈을 별도 브랜치에서 개발 후 병합하여
@@ -88,7 +88,7 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었습니다.
 
 # 5. Git 협업 전략 및 구조
 
-# 각 조원 Git hub 원격 저장소와 로컬 연결 
+- 각 조원 Git hub 원격 저장소와 로컬 연결 
 
 ![git 연결 및 등록 후 main branch 생성](https://github.com/user-attachments/assets/47c6f7cd-7707-4a70-853d-577e926d132b)
 
@@ -102,7 +102,7 @@ main.py를 통해 단일 실행 체계로 연동되도록 설계되었습니다.
 
 # 5.1 브랜치 전략
 
-# 각 조원 별 작업 브랜치 분기
+- 각 조원 별 작업 브랜치 분기
 
 - 모든 팀원은 `main` 브랜치에 직접 작업하지 않고, 개인 기능은 다음과 같은 브랜치명으로 관리함
 
@@ -135,12 +135,32 @@ PR에는 다음과 같은 내용을 포함하였습니다:
 - 테스트 방법 혹은 실행 화면 캡처
 - 코드 리뷰 및 충돌 여부 확인
 
-충돌이 발생할 가능성이 있는 경우, 로컬에서 사전 병합 테스트를 진행한 뒤
-main 브랜치에 반영함으로써 안정적인 통합을 유지했습니다.
 
-![pull request 1](https://github.com/user-attachments/assets/3db47c64-11f8-450d-929e-d1a10133e836)
-![image](https://github.com/user-attachments/assets/92a88a04-2d9f-4973-8cd3-d55b0a274e42)
 ![pull request 4 최종본](https://github.com/user-attachments/assets/6afeeaaa-a4d7-4ec9-b57e-11a2a7f734a0)
+
+**충돌이 발생할 가능성이 있는 경우, 로컬에서 사전 병합 테스트를 진행한 뒤
+main 브랜치에 반영함으로써 안정적인 통합을 유지했습니다.**
+
+
+![1](https://github.com/user-attachments/assets/bd8d9b48-1a27-4ffb-9369-e1ee58b3e806)
+![2](https://github.com/user-attachments/assets/e1ed5dee-33f1-4061-b610-f7132729a6fa)
+![3](https://github.com/user-attachments/assets/89f049ed-2f6d-4d0b-8dc5-63e322a740dc)
+![9 최종 merge 결과물 확인](https://github.com/user-attachments/assets/40bddff5-6c9c-4229-b307-c88f2457ffaf)
+
+** feature/director, feature/monster, feature/player 3개의 merge는 정상적으로 진행되었으나, feature/combat 과 merge에서 충돌 유발 **
+
+
+# 5.3 Merge 진행중 마지막에 충돌 발생.
+
+![5 merge conflict](https://github.com/user-attachments/assets/043a8494-0cb5-43fa-9642-2dfc33065b5d)
+
+**feature/combat 브랜치가 마지막에 conflict 충돌을 유발함**
+--
+
+
+
+
+
 
 
 
