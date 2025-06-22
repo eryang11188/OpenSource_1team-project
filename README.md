@@ -11,7 +11,7 @@
 - **저장소:** https://github.com/eryang11188/OpenSource_1team.git
 ---
 
-**v3환경에서 실행시 인코딩 문제가 발생할 수 있습니다.**
+**visual studio code 환경에서 main.py 실행시 인코딩 문제가 발생할 수 있습니다.**
 
 **인코딩 오류 발생 시 아래 명령어를 Git bash 터미널로 전환 후 콘솔에 입력해주세요!**
 
